@@ -1,0 +1,52 @@
+/* ============================================================
+   EINS System — Typography tokens
+   Pretendard for Korean+Latin; JetBrains Mono for spec values.
+   Strong contrast: heavy large headings vs clean light body.
+   English display uses wide uppercase tracking.
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+               "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+  --font-display: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  /* ---- Weights ---- */
+  --fw-light: 300;     /* @kind font */
+  --fw-regular: 400;   /* @kind font */
+  --fw-medium: 500;    /* @kind font */
+  --fw-semibold: 600;  /* @kind font */
+  --fw-bold: 700;      /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-black: 900;     /* @kind font */
+
+  /* ---- Type scale (px) ---- */
+  --fs-stat: 88px;     /* giant number callouts (900MHz, +4) */
+  --fs-display: 60px;  /* hero Korean headline */
+  --fs-h1: 44px;
+  --fs-h2: 34px;
+  --fs-h3: 26px;
+  --fs-h4: 20px;
+  --fs-lead: 19px;     /* intro paragraph */
+  --fs-body: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+  --fs-eyebrow: 13px;  /* uppercase english label */
+
+  /* ---- Line heights ---- */
+  --lh-tight: 1.08;    /* @kind font */
+  --lh-snug: 1.25;     /* @kind font */
+  --lh-normal: 1.6;    /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --ls-eyebrow: 0.22em;   /* @kind font */
+  --ls-caps: 0.14em;      /* @kind font */
+  --ls-display: -0.01em;  /* @kind font */
+  --ls-stat: -0.02em;     /* @kind font */
+  --ls-normal: 0;         /* @kind font */
+
+  /* ---- Semantic roles ---- */
+  --type-eyebrow-size: var(--fs-eyebrow);       /* @kind font */
+  --type-eyebrow-weight: var(--fw-semibold);    /* @kind font */
+  --type-eyebrow-spacing: var(--ls-eyebrow);    /* @kind font */
+}

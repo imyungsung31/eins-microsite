@@ -1,0 +1,71 @@
+/* ============================================================
+   EINS System — Color tokens
+   Dark, premium tech. Deep navy base → cyan/teal accents.
+   ============================================================ */
+:root {
+  /* ---- Base navy scale (backgrounds) ---- */
+  --navy-950: #060f1f;   /* deepest, page edge / footer */
+  --navy-900: #0a1628;   /* primary page background */
+  --navy-850: #0c1d33;
+  --navy-800: #0d2137;   /* raised panels, hero gradient end */
+  --navy-700: #122a45;   /* section bars, table headers */
+  --navy-600: #1b3a5c;   /* borders on dark, dividers */
+  --navy-500: #294d73;   /* muted strokes / disabled on dark */
+
+  /* ---- Cyan / teal accent scale ---- */
+  --cyan-400: #4dd0e1;   /* soft accent, gradient start */
+  --cyan-500: #00bcd4;   /* primary accent */
+  --cyan-300: #80deea;   /* light hover tint */
+  --cyan-bright: #00e5ff;/* high-energy highlight, tags */
+  --teal-600: #0097a7;   /* pressed accent */
+
+  /* ---- Neutrals (light card world) ---- */
+  --white: #ffffff;
+  --gray-50: #f5f8fb;    /* white-card subtle fill */
+  --gray-100: #e8eef4;
+  --gray-200: #d4dee8;   /* card borders */
+  --gray-400: #8a9bad;   /* muted text on light */
+  --gray-600: #51647a;   /* secondary text on light */
+  --gray-900: #0f1d30;   /* primary text on light cards */
+
+  /* ---- Semantic status ---- */
+  --success: #2ecf8f;
+  --warning: #ffb300;
+  --danger:  #ff5a5f;
+  --star:    #ffc24b;    /* rating stars */
+
+  /* ============ Semantic aliases ============ */
+  /* Surfaces */
+  --bg-page:        var(--navy-900);
+  --bg-page-deep:   var(--navy-950);
+  --bg-panel:       var(--navy-800);
+  --bg-bar:         var(--navy-700);     /* section header bar */
+  --surface-card:   var(--white);        /* light card */
+  --surface-card-muted: var(--gray-50);
+  --surface-badge:  var(--navy-800);     /* dark badge card */
+
+  /* Text */
+  --text-on-dark:        var(--white);
+  --text-on-dark-muted:  #aebfd0;
+  --text-on-dark-faint:  #6f87a0;
+  --text-on-light:       var(--gray-900);
+  --text-on-light-muted: var(--gray-600);
+  --text-accent:         var(--cyan-bright);
+
+  /* Accents / interactive */
+  --accent:         var(--cyan-500);
+  --accent-bright:  var(--cyan-bright);
+  --accent-soft:    var(--cyan-400);
+  --accent-press:   var(--teal-600);
+
+  /* Borders */
+  --border-on-dark:  var(--navy-600);
+  --border-on-light: var(--gray-200);
+  --border-accent:   var(--cyan-500);
+
+  /* Gradients */
+  --grad-hero:    linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 45%, #0e3a4d 100%);
+  --grad-accent:  linear-gradient(135deg, var(--cyan-500) 0%, var(--cyan-400) 100%);
+  --grad-accent-text: linear-gradient(135deg, var(--cyan-bright) 0%, var(--cyan-400) 100%);
+  --grad-panel:   linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+}
