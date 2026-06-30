@@ -25,14 +25,14 @@
   <!-- ============ SIDEBAR ============ -->
   <aside style="width:288px;min-width:288px;height:100%;background:linear-gradient(180deg,#06163a 0%,#0a2150 52%,#0c2f66 100%);color:#fff;display:flex;flex-direction:column;overflow-y:auto;">
     <div style="padding:30px 28px 22px;border-bottom:1px solid rgba(120,170,230,.16);">
-      <div style="font-size:23px;font-weight:800;letter-spacing:-.5px;line-height:1;">EINS<span style="color:#19c6f0;font-weight:700;"> system</span></div>
+      <img src="uploads/intel_logo-2c2e599b.png" alt="intel" style="display:block;width:96px;height:auto;">
       <div style="margin-top:14px;font-size:10.5px;letter-spacing:2.5px;color:#7fa8d8;font-weight:600;">DESKTOP PROCESSOR CATALOG</div>
     </div>
     <nav style="flex:1;padding:14px 16px;">
       <sc-for list="{{ navGroups }}" as="g" hint-placeholder-count="5">
         <div style="margin-bottom:6px;">
           <sc-if value="{{ g.label }}" hint-placeholder-val="{{ true }}">
-            <div style="padding:16px 12px 7px;font-size:10px;font-weight:700;letter-spacing:1.4px;color:#5f86bd;text-transform:uppercase;">{{ g.label }}</div>
+            <div style="padding:16px 12px 7px;font-size:10px;font-weight:700;letter-spacing:1.4px;color:#5f86bd;">{{ g.label }}</div>
           </sc-if>
           <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="2">
             <button data-navitem="1" data-nav="{{ it.id }}" onClick="{{ go }}" style="width:100%;text-align:left;border:none;background:transparent;color:#b9cde8;padding:10px 12px;border-radius:9px;font-size:13.5px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:11px;font-family:inherit;transition:background .18s,color .18s,box-shadow .18s;" style-hover="background:rgba(255,255,255,.07);color:#ffffff;">
@@ -372,7 +372,7 @@
           <h2 data-reveal style="font-size:24px;font-weight:800;color:#fff;margin:0 0 20px;">4개 라인업 한눈에 비교</h2>
           <div data-reveal style="border-radius:11px;overflow:hidden;border:1px solid #e2e8f1;background:#fff;box-shadow:0 2px 14px rgba(10,40,90,.05);margin-bottom:46px;">
             <div style="display:grid;grid-template-columns:130px repeat(4,1fr);background:#0a2a5e;color:#fff;font-size:14px;font-weight:700;">
-              <div style="padding:15px 16px;">항목</div>
+              <div style="padding:15px 16px;">탑재 CPU</div>
               <sc-for list="{{ compareCols }}" as="col" hint-placeholder-count="4">
                 <div style="padding:13px 16px;border-left:1px solid rgba(255,255,255,.12);">
                   <div style="font-size:14.5px;">{{ col.name }}</div>
@@ -532,11 +532,11 @@ class Component extends DCLogic {
 
     const navGroups = [
       { label: null, items: [{ id: 'home', num: '\u2302', title: '\ud45c\uc9c0 \u00b7 \uce74\ud0c8\ub85c\uadf8 \ud648' }] },
-      { label: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 200S Plus', items: [
+      { label: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 200S Plus \ud504\ub85c\uc138\uc11c', items: [
         { id: 's01', num: '01', title: '\ud504\ub85c\uc138\uc11c \uc18c\uac1c' },
         { id: 's02', num: '02', title: '\ud575\uc2ec \uae30\uc220' },
       ] },
-      { label: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra', items: [
+      { label: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra \ud504\ub85c\uc138\uc11c', items: [
         { id: 's03', num: '03', title: '\ud504\ub85c\uc138\uc11c \uc18c\uac1c' },
         { id: 's04', num: '04', title: '\ud575\uc2ec \uae30\uc220' },
       ] },
@@ -570,7 +570,7 @@ class Component extends DCLogic {
         title: '\ucd94\ucc9c PC \uad6c\uc131 #1  \uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 270K Plus',
         subtitle: '24\ucf54\uc5b4 \ud30c\uc6cc\ub85c \ud06c\ub9ac\uc5d0\uc774\ud130\uc640 \uac8c\uc774\uba38 \ubaa8\ub450\ub97c \uc704\ud55c \ucd5c\uac15 \ube4c\ub4dc',
         rows: [
-          { k: 'CPU', v: 'Intel\u00ae Core\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 270K Plus (24C/24T, 5.5GHz)' },
+          { k: 'CPU', v: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 270K Plus (24C/24T, 5.5GHz)' },
           { k: '\ucfe8\ub7ec', v: '280mm AIO \uc218\ub0c9\ucfe8\ub7ec' },
           { k: '\uba54\uc778\ubcf4\ub4dc', v: '\uc778\ud154\u00ae Z890 \uce69\uc14b' },
           { k: '\uba54\ubaa8\ub9ac', v: 'DDR5-7200 64GB (32GB \u00d7 2)  XMP 3.0 \uc9c0\uc6d0' },
@@ -587,7 +587,7 @@ class Component extends DCLogic {
         title: '\ucd94\ucc9c PC \uad6c\uc131 #2  \uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 250K Plus',
         subtitle: '18\ucf54\uc5b4 \uac00\uc131\ube44 \ucc54\ud53c\uc5b8 \u2014 \uac8c\uc784\ud558\uba74\uc11c \ub3d9\uc2dc\uc5d0 \uc2a4\ud2b8\ub9ac\ubc0d\uae4c\uc9c0',
         rows: [
-          { k: 'CPU', v: 'Intel\u00ae Core\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 250K Plus (18C/18T, 5.3GHz)' },
+          { k: 'CPU', v: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 250K Plus (18C/18T, 5.3GHz)' },
           { k: '\ucfe8\ub7ec', v: '240mm AIO \uc218\ub0c9\ucfe8\ub7ec' },
           { k: '\uba54\uc778\ubcf4\ub4dc', v: '\uc778\ud154\u00ae Z890 \uce69\uc14b' },
           { k: '\uba54\ubaa8\ub9ac', v: 'DDR5-7200 32GB (16GB \u00d7 2) XMP 3.0 \uc9c0\uc6d0' },
@@ -604,7 +604,7 @@ class Component extends DCLogic {
         title: '\ucd94\ucc9c PC \uad6c\uc131 #3  \uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 265K',
         subtitle: '\uac8c\uc774\ubc0d\ubd80\ud130 \uc5c5\ubb34\u00b7\ucf58\ud150\uce20 \uc81c\uc791\uae4c\uc9c0 \uc644\ubcbd\ud788 \uc18c\ud654\ud558\ub294 \uc62c\ub77c\uc6b4\ub354 \uad6c\uc131',
         rows: [
-          { k: 'CPU', v: 'Intel\u00ae Core\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 265K (20C/20T, 5.5GHz)' },
+          { k: 'CPU', v: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 265K (20C/20T, 5.5GHz)' },
           { k: '\ucfe8\ub7ec', v: '240mm AIO \uc218\ub0c9\ucfe8\ub7ec' },
           { k: '\uba54\uc778\ubcf4\ub4dc', v: '\uc778\ud154\u00ae Z890 \uce69\uc14b' },
           { k: '\uba54\ubaa8\ub9ac', v: 'DDR5-6400 32GB (16GB \u00d7 2) XMP 3.0 \uc9c0\uc6d0' },
@@ -621,7 +621,7 @@ class Component extends DCLogic {
         title: '\ucd94\ucc9c PC \uad6c\uc131 #4  \uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 245K',
         subtitle: 'Z890 \ud50c\ub7ab\ud3fc \ucd5c\uc800\uac00 \uc9c4\uc785 \u2014 \ud569\ub9ac\uc801\uc778 \uc608\uc0b0\uc73c\ub85c \ucd5c\ub300 \ud37c\ud3ec\uba3c\uc2a4',
         rows: [
-          { k: 'CPU', v: 'Intel\u00ae Core\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 245K  (14C/14T, 5.2GHz)' },
+          { k: 'CPU', v: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 245K  (14C/14T, 5.2GHz)' },
           { k: '\ucfe8\ub7ec', v: '120mm AIO \uc218\ub0c9\ucfe8\ub7ec' },
           { k: '\uba54\uc778\ubcf4\ub4dc', v: '\uc778\ud154\u00ae Z890 \uce69\uc14b' },
           { k: '\uba54\ubaa8\ub9ac', v: 'DDR5-6000 32GB (16GB \u00d7 2)  XMP 3.0 \uc9c0\uc6d0' },
@@ -635,10 +635,10 @@ class Component extends DCLogic {
     };
 
     const compareCols = [
-      { name: 'Ultra 7 270K Plus', series: 'Core Ultra 200S Plus' },
-      { name: 'Ultra 5 250K Plus', series: 'Core Ultra 200S Plus' },
-      { name: 'Ultra 7 265K', series: 'Core Ultra 200S' },
-      { name: 'Ultra 5 245K', series: 'Core Ultra 200S' },
+      { name: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7', series: '\ud504\ub85c\uc138\uc11c 270K Plus' },
+      { name: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5', series: '\ud504\ub85c\uc138\uc11c 250K Plus' },
+      { name: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7', series: '\ud504\ub85c\uc138\uc11c 265K' },
+      { name: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5', series: '\ud504\ub85c\uc138\uc11c 245K' },
     ];
     const compareRows = [
       { label: '\ucf54\uc5b4 \uad6c\uc131', vals: ['24\ucf54\uc5b4 (8P+16E)', '18\ucf54\uc5b4 (6P+12E)', '20\ucf54\uc5b4 (8P+12E)', '14\ucf54\uc5b4 (6P+8E)'] },
@@ -651,10 +651,10 @@ class Component extends DCLogic {
     ];
 
     const usecases = [
-      { no: 'A', use: '4K \uc601\uc0c1 \ud3b8\uc9d1 \u00b7 3D \ub80c\ub354\ub9c1 \u00b7 AI \ud06c\ub9ac\uc5d0\uc774\ud2f0\ube0c', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 270K Plus', why: '24\ucf54\uc5b4 + DDR5-7200 \uacf5\uc2dd \uc9c0\uc6d0\uc73c\ub85c \ucd5c\uace0 \uc218\uc900\uc758 \uba40\ud2f0\ucf54\uc5b4 \ucc98\ub9ac\ub7c9. \uace0\ubd80\ud558 \ud06c\ub9ac\uc5d0\uc774\ud2f0\ube0c \uc6cc\ud06c\ub85c\ub4dc\uc5d0 \ucd5c\uc801.' },
-      { no: 'B', use: '\uac8c\uc784 + \ubc29\uc1a1 \ub3d9\uc2dc \uc2a4\ud2b8\ub9ac\ubc0d', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 250K Plus', why: '18\ucf54\uc5b4\ub85c \uac8c\uc774\ubc0d\u00b7\uc778\ucf54\ub529\uc744 \ub3d9\uc2dc \ucc98\ub9ac\ud558\uba74\uc11c\ub3c4 \uac00\uc131\ube44\uac00 \uc6b0\uc218. \uc2a4\ud2b8\ub9ac\uba38\uc5d0\uac8c \ucd5c\uc801\uc758 \uade0\ud615.' },
-      { no: 'C', use: '\uac8c\uc774\ubc0d + \uc5c5\ubb34 + \uac1c\ubc1c \uc62c\ub77c\uc6b4\ub354', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 265K', why: '20\ucf54\uc5b4 8P \uad6c\uc131\uc73c\ub85c QHD \uace0\uc0ac\uc591 \uac8c\uc784\uacfc \uc0dd\uc0b0\uc131 \uc791\uc5c5\uc744 \ubaa8\ub450 \uade0\ud615 \uc788\uac8c \uc18c\ud654.' },
-      { no: 'D', use: 'FHD \uac8c\uc774\ubc0d \u00b7 Z890 \uc785\ubb38 \u00b7 \uac00\uc131\ube44', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 245K', why: 'Z890 \ud50c\ub7ab\ud3fc \ucd5c\uc800\uac00 \uc9c4\uc785. \ud569\ub9ac\uc801\uc778 \uc608\uc0b0\uc73c\ub85c \uac8c\uc774\ubc0d\uacfc \uc77c\uc0c1 \uc5c5\ubb34\ub97c \ubaa8\ub450 \ucc98\ub9ac.' },
+      { no: 'A', use: '4K \uc601\uc0c1 \ud3b8\uc9d1 \u00b7 3D \ub80c\ub354\ub9c1 \u00b7 AI \ud06c\ub9ac\uc5d0\uc774\ud2f0\ube0c', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 270K Plus', why: '24\ucf54\uc5b4 + DDR5-7200 \uacf5\uc2dd \uc9c0\uc6d0\uc73c\ub85c \ucd5c\uace0 \uc218\uc900\uc758 \uba40\ud2f0\ucf54\uc5b4 \ucc98\ub9ac\ub7c9. \uace0\ubd80\ud558 \ud06c\ub9ac\uc5d0\uc774\ud2f0\ube0c \uc6cc\ud06c\ub85c\ub4dc\uc5d0 \ucd5c\uc801.' },
+      { no: 'B', use: '\uac8c\uc784 + \ubc29\uc1a1 \ub3d9\uc2dc \uc2a4\ud2b8\ub9ac\ubc0d', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 250K Plus', why: '18\ucf54\uc5b4\ub85c \uac8c\uc774\ubc0d\u00b7\uc778\ucf54\ub529\uc744 \ub3d9\uc2dc \ucc98\ub9ac\ud558\uba74\uc11c\ub3c4 \uac00\uc131\ube44\uac00 \uc6b0\uc218. \uc2a4\ud2b8\ub9ac\uba38\uc5d0\uac8c \ucd5c\uc801\uc758 \uade0\ud615.' },
+      { no: 'C', use: '\uac8c\uc774\ubc0d + \uc5c5\ubb34 + \uac1c\ubc1c \uc62c\ub77c\uc6b4\ub354', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 7 \ud504\ub85c\uc138\uc11c 265K', why: '20\ucf54\uc5b4 20\uc2a4\ub808\ub4dc \uad6c\uc131\uc73c\ub85c QHD \uace0\uc0ac\uc591 \uac8c\uc784\uacfc \uc0dd\uc0b0\uc131 \uc791\uc5c5\uc744 \ubaa8\ub450 \uade0\ud615 \uc788\uac8c \uc18c\ud654.' },
+      { no: 'D', use: 'FHD \uac8c\uc774\ubc0d \u00b7 Z890 \uc785\ubb38 \u00b7 \uac00\uc131\ube44', cpu: '\uc778\ud154\u00ae \ucf54\uc5b4\u2122 Ultra 5 \ud504\ub85c\uc138\uc11c 245K', why: 'Z890 \ud50c\ub7ab\ud3fc \ucd5c\uc800\uac00 \uc9c4\uc785. \ud569\ub9ac\uc801\uc778 \uc608\uc0b0\uc73c\ub85c \uac8c\uc774\ubc0d\uacfc \uc77c\uc0c1 \uc5c5\ubb34\ub97c \ubaa8\ub450 \ucc98\ub9ac.' },
     ];
 
     const buildIds = ['s05', 's06', 's07', 's08'];
